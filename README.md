@@ -126,4 +126,4 @@ The app uses a **MobileNetV2** model trained to classify poultry diseases from f
 
 **[Zohaib Alam]**  
 Final Year Project — [CUI ATTOCK CAMPUS]  
-[202]
+[August 2025]
