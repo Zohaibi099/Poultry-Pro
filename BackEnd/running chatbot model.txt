@@ -1,0 +1,18 @@
+running chatbot model
+
+return {"reply": response.split("\n")[0]}
+return {"reply": response.split("</think><think>")[0]}
+python main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+key api=71d387aa15ab95a190cb52e4ac2eeb8867ba2ffa0bba48818b1944137a17c8f0
+
+
+acha to audio ma ha ka:
+groq cloud pe jao or waha se api key lo
+api ke through lama ko use karlete
+phir python pe lankchain install karo
+to hamne groq api use karni through lankchain(library)llama ko use karna
+or hamne apne poultry pro ke liya chatbot banana ha
+ab ye front end se call ho iska response generate ho or phir frontend pe bhej dein
+acha ab ye poora tareeqa mujha samjhao

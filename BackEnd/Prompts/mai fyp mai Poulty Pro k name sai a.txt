@@ -1,0 +1,14 @@
+mai fyp mai "Poulty Pro" k name sai app bana raha hu ismai mai target mainly local shop keepers aur low_level farmers aur specially jo log gharo mai palta  hai. is app mai mai poultry farming guide ka bataya hai, chickens ki almost saari disease ki information like symptoms prevention aur medicine ka bataya hai, buy/sell ka platform b hai, ek chatbot b hai aur main module detection hai jis mai chicken ki main bimariyo ko detect kare ga unki stool k base per, aur news ka module b hai jis mai latest bimariyo ki, weather change ki information, prices ka batao ga. disease information and care, poultry farming guide ka content static hai. Aur userinterface professional aur simple hai na k complexjo illetrate users k liye easy hai use karna. mai is app k liye react native aur detection k liye python aur database k liye supabase use kar raha hu.   
+
+
+ab jese mera app run hota to ma onboading screen pe jata jaha lets begin ka button ha hon uske bad ma jobcategory screen pe jata hon jaha saara grid view ha modules ka
+ab ma supabase se authentication chata hn mene already waha project banaya huwa ha ma tumha uski file bheta hon supabase client ki
+
+
+ab meri project ki naviagtion mene ese ki ha
+BuySellnavigator //jo ke but,sell or liked screen ko import karta ha or tab navigation huwi ha
+newsnavigator //jo ke news,news detail scren ko import karta 
+root navigator //jisme saari screen baki import or stack ke through access huwi hain login,signup or profile screens ko choor ke jo tumne abhi di hain
+or phir root navigation ko stack ke through app.js ma import kiya ha
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./navigation/RootNavigator

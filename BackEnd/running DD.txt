@@ -1,0 +1,9 @@
+#python main.py
+#python model_loader.py
+#uvicorn main:app --host 0.0.0.0 --port 8001
+#http://192.168.91.185:8000/docs
+#replace with ipcofig also check ip in react native
+#Find the /predict POST endpoint.
+# Click on it → click "Try it out".
+# Under "file", choose a sample image (e.g. cocci.1243.jpg).
+# Click Execute

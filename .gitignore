@@ -1,0 +1,57 @@
+# ========================
+# Python / Backend
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+api.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ML Model & Data (large files)
+*.pt
+*.pth
+*.h5
+poultry_faq.txt
+
+# ========================
+# React Native / Frontend
+# ========================
+node_modules/
+.expo/
+dist/
+web-build/
+.metro-health-check*
+
+# Expo
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# ========================
+# OS & Editor
+# ========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*
+api.env
