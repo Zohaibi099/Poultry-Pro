@@ -9,7 +9,7 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 ### Home & AI Chatbot
 | Home Screen | AI Assistant Chatbot |
 |-------------|-------------------|
-| ![Home](FrontEnd/assets/screenshots/Home.jpeg) | [Chatbot](FrontEnd/assets/screenshots/Live_Assistant(ChatBot).jpeg) |
+| ![Home](FrontEnd/assets/screenshots/Home.jpeg) | ![Chatbot](FrontEnd/assets/screenshots/Live_Assistant(ChatBot).jpeg) |
 
 ### Disease Detection
 | Upload Image | Result - Coccidiosis | Result - Salmonella | Unknown Image |
