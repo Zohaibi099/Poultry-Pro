@@ -4,12 +4,44 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 
 ---
 
+## 📸 Screenshots
+
+### Home & AI Chatbot
+| Home Screen | AI Assistant Chatbot |
+|-------------|-------------------|
+| ![Home](FrontEnd/assets/screenshots/Home.jpeg) | ![Chatbot](FrontEnd/assets/screenshots/Live_Assistant_ChatBot_.jpeg) |
+
+### Disease Detection
+| Upload Image | Result - Coccidiosis | Result - Salmonella | Unknown Image |
+|-------------|---------------------|-------------------|---------------|
+| ![Upload](FrontEnd/assets/screenshots/Disease_Detection.jpeg) | ![Coccidiosis](FrontEnd/assets/screenshots/Disease_Detection__1_.jpeg) | ![Salmonella](FrontEnd/assets/screenshots/Disease_Detection_2_.jpeg) | ![Unknown](FrontEnd/assets/screenshots/Disease_Detection_3_.jpeg) |
+
+### Disease Management & News
+| Disease Management | News & Tips | News Detail |
+|-------------------|-------------|-------------|
+| ![Management](FrontEnd/assets/screenshots/Disease_Management.jpeg) | ![News](FrontEnd/assets/screenshots/News_and_Tips.jpeg) | ![News Detail](FrontEnd/assets/screenshots/News_And_Tips_2_.jpeg) |
+
+### Market & Profile
+| Live Market | List Product | Seller Profile |
+|-------------|-------------|----------------|
+| ![Market](FrontEnd/assets/screenshots/Market_Live_Products.jpeg) | ![List](FrontEnd/assets/screenshots/Market_Listing.jpeg) | ![Profile](FrontEnd/assets/screenshots/Market_Profile_Page.jpeg) |
+
+### Farming Guide
+| Poultry Farming Guide |
+|----------------------|
+| ![Guide](FrontEnd/assets/screenshots/Poultry_Farming_Guide.jpeg) |
+
+---
+
 ## ✨ Features
 
 - 🤖 **AI Chatbot** — Poultry assistant powered by DeepSeek via OpenRouter (Urdu-English mix)
-- 🦠 **Disease Detection** — Upload poultry fecal images to detect diseases using a MobileNetV2 ML model
-- 📊 **Farm Analytics** — Charts and stats for farm management
-- 👤 **User Auth** — Login/Signup powered by Supabase
+- 🦠 **Disease Detection** — Upload poultry fecal images to detect diseases using a MobileNetV2 ML model (~96% accuracy)
+- 🏥 **Disease Management** — Directory of 28 diseases across 7 categories with prevention & remedies
+- 🛒 **Live Market** — Buy/sell chickens and poultry products with real listings
+- 📰 **Health News & Tips** — Latest poultry health updates
+- 📚 **Farming Guide** — Complete guide for every stage of poultry care (13 categories)
+- 👤 **User Profiles** — Seller profiles with ratings and product listings
 - 💾 **Persistent State** — Data saved across sessions using Redux Persist
 
 ---
@@ -40,7 +72,7 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 
 ```
 PoultryPro/
-├── backend/
+├── BackEnd/
 │   ├── main.py               # FastAPI server
 │   ├── model_loader.py       # ML model loader & predictor
 │   ├── labels.json           # Disease class labels
@@ -48,14 +80,15 @@ PoultryPro/
 │   ├── poultry_faq.txt       # Poultry knowledge base
 │   └── requirements.txt      # Python dependencies
 │
-└── frontend/
+└── FrontEnd/
     ├── App.js                # Root app component
     ├── app.json              # Expo configuration
     ├── package.json          # JS dependencies
     ├── navigation/           # Navigation setup
     ├── redux/                # Redux store & slices
     ├── screens/              # App screens
-    └── assets/               # Images & icons
+    └── assets/
+        └── screenshots/      # App screenshots
 ```
 
 ---
@@ -66,7 +99,7 @@ PoultryPro/
 
 ```bash
 # 1. Go to backend folder
-cd backend
+cd BackEnd
 
 # 2. Create virtual environment
 python -m venv venv
@@ -91,7 +124,7 @@ Backend runs at: `http://localhost:8000`
 
 ```bash
 # 1. Go to frontend folder
-cd frontend
+cd FrontEnd
 
 # 2. Install dependencies
 npm install
@@ -106,7 +139,7 @@ Scan the QR code with **Expo Go** app on your phone.
 
 ## 🔑 Environment Variables
 
-Create a file called `api.env` in the backend folder:
+Create a file called `api.env` in the BackEnd folder:
 
 ```
 OPENROUTER_API_KEY=your_openrouter_api_key_here
@@ -120,10 +153,13 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 
 The app uses a **MobileNetV2** model trained to classify poultry diseases from fecal images into 4 categories. Predictions with low confidence (< 60%) or high uncertainty are rejected as **Unknown**.
 
+**Model Accuracy: ~96%**
+
 ---
 
 ## 👨‍💻 Author
 
 **[Zohaib Alam]**  
-Final Year Project — [CUI ATTOCK CAMPUS]  
-[August 2025]
+Final Year Project — [Comsats Uni Isl,Attock Campus]  
+[2025]
+
