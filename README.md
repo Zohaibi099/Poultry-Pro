@@ -1,146 +1,129 @@
 # 🐔 Poultry Pro
 
-**Poultry Pro** is a smart, easy-to-use mobile application designed to support poultry farmers, shopkeepers, and household chicken keepers — especially those with limited technical knowledge. The app combines **practical farming guidance**, **disease detection**, and a **local marketplace** into one simple platform.
+A smart poultry farm management app built with **React Native Expo** (frontend) and **FastAPI Python** (backend). It helps poultry farmers detect diseases from fecal images and get AI-powered farming advice in Urdu-English.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 📚 Poultry Farming Guides
-
-* Step-by-step guides for raising chickens
-* Feeding, housing, and vaccination schedules
-* Designed in simple language for easy understanding
-
-### 🦠 Disease Information
-
-* Common poultry diseases with:
-
-  * Symptoms
-  * Causes
-  * Prevention methods
-  * Suggested medicines
-
-### 🤖 AI Chatbot Assistant
-
-* Helps users with poultry-related questions
-* Trained specifically for poultry farming support
-* Provides instant, easy-to-understand answers
-
-### 🔬 Stool-Based Disease Detection
-
-* Upload chicken stool images
-* Python-based model analyzes and predicts possible diseases
-* Helps in early detection and prevention
-
-### 🛒 Buy & Sell Marketplace
-
-* Users can:
-
-  * Buy chickens, feed, and equipment
-  * Sell poultry-related products
-* Focused on local community trading
-
-### 📰 News & Updates
-
-* Latest updates on:
-
-  * Disease outbreaks
-  * Poultry market prices
-  * Weather conditions affecting poultry
+- 🤖 **AI Chatbot** — Poultry assistant powered by DeepSeek via OpenRouter (Urdu-English mix)
+- 🦠 **Disease Detection** — Upload poultry fecal images to detect diseases using a MobileNetV2 ML model
+- 📊 **Farm Analytics** — Charts and stats for farm management
+- 👤 **User Auth** — Login/Signup powered by Supabase
+- 💾 **Persistent State** — Data saved across sessions using Redux Persist
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component     | Technology Used       |
-| ------------- | --------------------- |
-| Mobile App    | React Native (Expo)   |
-| Backend       | Supabase              |
-| AI Model      | Python                |
-| Chatbot Model | DeepSeek (fine-tuned) |
-| Database      | Supabase              |
+### Frontend
+| Tech | Purpose |
+|------|---------|
+| React Native + Expo | Mobile app framework |
+| Redux Toolkit + Redux Persist | State management |
+| Supabase | Authentication & database |
+| React Navigation | Screen navigation |
+| Expo Image Picker | Camera / image upload |
+| React Native Chart Kit | Farm analytics charts |
+
+### Backend
+| Tech | Purpose |
+|------|---------|
+| FastAPI | REST API server |
+| PyTorch + MobileNetV2 | Disease detection ML model |
+| OpenRouter (DeepSeek) | AI chatbot |
+| Python-dotenv | Environment variables |
 
 ---
 
-## 🎯 Target Users
+## 📁 Project Structure
 
-* Small-scale poultry farmers
-* Shopkeepers
-* Household poultry keepers
-* Users with low literacy (simple UI focus)
-
----
-
-## 📱 App Design Philosophy
-
-* Simple and clean interface
-* Minimal text, more visual guidance
-* Fast and lightweight
-* Accessible to non-technical users
-
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/poultry-pro.git
-cd poultry-pro
+```
+PoultryPro/
+├── backend/
+│   ├── main.py               # FastAPI server
+│   ├── model_loader.py       # ML model loader & predictor
+│   ├── labels.json           # Disease class labels
+│   ├── poultry_model.pt      # Trained MobileNetV2 model
+│   ├── poultry_faq.txt       # Poultry knowledge base
+│   └── requirements.txt      # Python dependencies
+│
+└── frontend/
+    ├── App.js                # Root app component
+    ├── app.json              # Expo configuration
+    ├── package.json          # JS dependencies
+    ├── navigation/           # Navigation setup
+    ├── redux/                # Redux store & slices
+    ├── screens/              # App screens
+    └── assets/               # Images & icons
 ```
 
-### 2. Install Dependencies
+---
+
+## 🚀 Getting Started
+
+### Backend Setup
 
 ```bash
+# 1. Go to backend folder
+cd backend
+
+# 2. Create virtual environment
+python -m venv venv
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # Mac/Linux
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Create api.env file and add your key
+OPENROUTER_API_KEY=your_api_key_here
+
+# 5. Run the server
+uvicorn main:app --reload
+```
+
+Backend runs at: `http://localhost:8000`
+
+---
+
+### Frontend Setup
+
+```bash
+# 1. Go to frontend folder
+cd frontend
+
+# 2. Install dependencies
 npm install
-```
 
-### 3. Run the App
-
-```bash
+# 3. Start Expo
 npx expo start
 ```
 
-### 4. Backend Setup
-
-* Configure Supabase credentials in `.env`
-* Run Python model separately for disease detection
+Scan the QR code with **Expo Go** app on your phone.
 
 ---
 
-## 🧠 Future Improvements
+## 🔑 Environment Variables
 
-* Voice support (for illiterate users)
-* Offline mode for rural areas
-* Advanced AI disease prediction
-* Multi-language support (Urdu, Punjabi, etc.)
+Create a file called `api.env` in the backend folder:
 
----
+```
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
 
-## 🤝 Contribution
-
-Contributions are welcome!
-Feel free to fork this repo and submit a pull request.
+> ⚠️ Never commit your API key to GitHub. It is already excluded in `.gitignore`.
 
 ---
 
-## 📄 License
+## 🦠 Disease Detection
 
-This project is licensed under the MIT License.
-
----
-
-## 👤 Author
-
-**Zohaib Alam**
+The app uses a **MobileNetV2** model trained to classify poultry diseases from fecal images into 4 categories. Predictions with low confidence (< 60%) or high uncertainty are rejected as **Unknown**.
 
 ---
 
-## 💡 Vision
+## 👨‍💻 Author
 
-To empower local poultry farmers with **technology that is simple, accessible, and practical**, helping them increase productivity and reduce losses.
-
----
-
-⭐ If you like this project,Please  give it a star!
+**[Zohaib Alam]**  
+Final Year Project — [CUI ATTOCK CAMPUS]  
+[202]
