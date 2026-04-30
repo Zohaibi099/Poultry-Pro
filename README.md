@@ -9,27 +9,27 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 ### Home & AI Chatbot
 | Home Screen | AI Assistant Chatbot |
 |-------------|-------------------|
-| ![Home](FrontEnd/assets/screenshots/Home.jpeg) | ![Chatbot](FrontEnd/assets/screenshots/Live Assistant(ChatBot).jpeg) |
+| ![Home](FrontEnd/assets/screenshots/Home.jpeg) | [Chatbot](FrontEnd/assets/screenshots/Live_Assistant(ChatBot).jpeg) |
 
 ### Disease Detection
 | Upload Image | Result - Coccidiosis | Result - Salmonella | Unknown Image |
 |-------------|---------------------|-------------------|---------------|
-| ![Upload](FrontEnd/assets/screenshots/Disease Detection.jpeg) | ![Coccidiosis](FrontEnd/assets/screenshots/Disease Detection (1).jpeg) | ![Salmonella](FrontEnd/assets/screenshots/Disease Detection (2).jpeg) | ![Unknown](FrontEnd/assets/screenshots/Disease Detection (3).jpeg) |
+| ![Upload](FrontEnd/assets/screenshots/Disease_Detection.jpeg) | ![Coccidiosis](FrontEnd/assets/screenshots/Disease_Detection(1).jpeg) | ![Salmonella](FrontEnd/assets/screenshots/Disease_Detection(2).jpeg) | ![Unknown](FrontEnd/assets/screenshots/Disease_Detection(3).jpeg) |
 
 ### Disease Management & News
 | Disease Management | News & Tips |
 |-------------------|-------------|-------------|
-| ![Management](FrontEnd/assets/screenshots/Disease Management.jpeg) | ![News](FrontEnd/assets/screenshots/News and Tips.jpeg) | ![News Detail](FrontEnd/assets/screenshots/News and Tips(1).jpeg) |
+| ![Management](FrontEnd/assets/screenshots/Disease_Management.jpeg) | ![News](FrontEnd/assets/screenshots/News_And_Tips.jpeg) | ![News Detail](FrontEnd/assets/screenshots/News_And_Tips(1).jpeg) |
 
 ### Market & Profile
 | Live Market | List Product | Seller Profile |
 |-------------|-------------|----------------|
-| ![Market](FrontEnd/assets/screenshots/Market Live Products.jpeg) | ![List](FrontEnd/assets/screenshots/Market Listing.jpeg) | ![Profile](FrontEnd/assets/screenshots/Market Profile Page.jpeg) |
+| ![Market](FrontEnd/assets/screenshots/Market_Live_Products.jpeg) | ![List](FrontEnd/assets/screenshots/Market_Listing.jpeg) | ![Profile](FrontEnd/assets/screenshots/Market_Profile_Page.jpeg) |
 
 ### Farming Guide
 | Poultry Farming Guide |
 |----------------------|
-| ![Guide](FrontEnd/assets/screenshots/Poultry Farming Guide.jpeg) |
+| ![Guide](FrontEnd/assets/screenshots/Poultry_Farming_Guide.jpeg) |
 
 ---
 
