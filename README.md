@@ -1,6 +1,12 @@
 # 🐔 Poultry Pro
 
-A smart poultry farm management app built with **React Native Expo** (frontend) and **FastAPI Python** (backend). It helps poultry farmers detect diseases from fecal images and get AI-powered farming advice in Urdu-English.
+> **Applied AI research project** — Intelligent disease detection and farm management for rural poultry farmers in Pakistan.
+
+## The Problem
+
+Poultry farming contributes over **$3.5 billion** to Pakistan's agricultural economy and supports millions of rural livelihoods. Yet most small scale farmers have no access to veterinary services. A single disease outbreak can wipe out an entire flock before a farmer can get professional help. Diagnosis is slow, expensive, and often impossible in remote areas.
+
+Poultry Pro addresses this directly: an AI-powered mobile platform that puts disease detection, veterinary guidance, and farm management tools in the hands of farmers who have a smartphone but no vet nearby.
 
 ---
 
@@ -30,13 +36,14 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 | Poultry Farming Guide |
 |----------------------|
 | <img src="FrontEnd/assets/screenshots/Poultry_Farming_Guide.jpeg" width="200"/> |
+
 ---
 
 ## ✨ Features
 
 - 🤖 **AI Chatbot** — Poultry assistant powered by DeepSeek via OpenRouter (Urdu-English mix)
 - 🦠 **Disease Detection** — Upload poultry fecal images to detect diseases using a MobileNetV2 ML model (~96% accuracy)
-- 🏥 **Disease Management** — Directory of 28 diseases across 7 categories with prevention & remedies
+- 🏥 **Disease Management** — Directory of 28 diseases across 7 categories with prevention and remedies
 - 🛒 **Live Market** — Buy/sell chickens and poultry products with real listings
 - 📰 **Health News & Tips** — Latest poultry health updates
 - 📚 **Farming Guide** — Complete guide for every stage of poultry care (13 categories)
@@ -52,7 +59,7 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 |------|---------|
 | React Native + Expo | Mobile app framework |
 | Redux Toolkit + Redux Persist | State management |
-| Supabase | Authentication & database |
+| Supabase | Authentication and database |
 | React Navigation | Screen navigation |
 | Expo Image Picker | Camera / image upload |
 | React Native Chart Kit | Farm analytics charts |
@@ -73,7 +80,7 @@ A smart poultry farm management app built with **React Native Expo** (frontend) 
 PoultryPro/
 ├── BackEnd/
 │   ├── main.py               # FastAPI server
-│   ├── model_loader.py       # ML model loader & predictor
+│   ├── model_loader.py       # ML model loader and predictor
 │   ├── labels.json           # Disease class labels
 │   ├── poultry_model.pt      # Trained MobileNetV2 model
 │   ├── poultry_faq.txt       # Poultry knowledge base
@@ -84,7 +91,7 @@ PoultryPro/
     ├── app.json              # Expo configuration
     ├── package.json          # JS dependencies
     ├── navigation/           # Navigation setup
-    ├── redux/                # Redux store & slices
+    ├── redux/                # Redux store and slices
     ├── screens/              # App screens
     └── assets/
         └── screenshots/      # App screenshots
@@ -148,9 +155,9 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 
 ---
 
-## 🦠 Disease Detection
+## 🦠 Disease Detection Model
 
-The app uses a **MobileNetV2** model trained to classify poultry diseases from fecal images into 4 categories. Predictions with low confidence (< 60%) or high uncertainty are rejected as **Unknown**.
+The app uses a **MobileNetV2** model trained on poultry fecal images to classify diseases into 4 categories. Predictions with low confidence (below 60%) are rejected as **Unknown** to prevent false diagnoses in the field.
 
 **Model Accuracy: ~96%**
 
@@ -158,7 +165,12 @@ The app uses a **MobileNetV2** model trained to classify poultry diseases from f
 
 ## 👨‍💻 Author
 
-**[Zohaib Alam]**  
-Final Year Project — [Comsats Uni Isl,Attock Campus]  
-[2025]
+**Zohaib Alam**
+Final Year Project, COMSATS University Islamabad, Attock Campus (2025)
+BCS — Bachelor of Computer Science
 
+- LinkedIn: [linkedin.com/in/zohaib-alam-a1656b351](https://linkedin.com/in/zohaib-alam-a1656b351)
+- GitHub: [github.com/Zohaibi099](https://github.com/Zohaibi099)
+- Email: zohaibalam970@gmail.com
+
+*Research interests: Applied AI, LLMs for domain-specific applications, intelligent systems for agriculture and healthcare in developing regions.*
